@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="540.0" maxWidth="723.0" minHeight="538.0" minWidth="605.0" prefHeight="540.0" prefWidth="605.0" style="-fx-background-color: #F0F8FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ordemservicodesktop.controllers.LoginController">
+   <children>
+      <Label id="labelSenha" layoutX="92.0" layoutY="329.0" prefHeight="46.0" prefWidth="106.0" text="Senha" textFill="#5b5454">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label id="labelUsuario" layoutX="92.0" layoutY="258.0" prefHeight="46.0" prefWidth="106.0" text="Usuario" textFill="#5b5454">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <TextField id="textFildUsuario" fx:id="txtUsuario" layoutX="198.0" layoutY="269.0" />
+      <Button id="btnLogar" fx:id="loginButton" layoutX="145.0" layoutY="433.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="106.0" text="Logar">
+         <font>
+            <Font name="DejaVu Sans Bold" size="14.0" />
+         </font></Button>
+      <Button id="btnSair" fx:id="btnSair" layoutX="297.0" layoutY="433.0" mnemonicParsing="false" onAction="#fecharAplicacao" prefHeight="46.0" prefWidth="106.0" text="Sair">
+         <font>
+            <Font name="DejaVu Sans Bold" size="14.0" />
+         </font></Button>
+      <PasswordField id="passFieldSenha" layoutX="198.0" layoutY="340.0" />
+      <Label id="labelLogin" fx:id="labelLogin" layoutX="251.0" layoutY="197.0" prefHeight="46.0" prefWidth="128.0" text="LOGIN" textFill="#5b5858" AnchorPane.bottomAnchor="302.0" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="231.0" AnchorPane.topAnchor="192.0">
+         <font>
+            <Font name="DejaVu Sans Bold" size="33.0" />
+         </font>
+      </Label>
+      <AnchorPane prefHeight="180.0" prefWidth="605.0" style="-fx-background-color: #6495ED;">
+         <children>
+            <Label id="labelTitleOrdem" fx:id="labelTitleOrdem" graphicTextGap="3.0" layoutX="198.0" layoutY="67.0" nodeOrientation="LEFT_TO_RIGHT" text="Ordem de Servico" textFill="#e1e1da" textOverrun="LEADING_ELLIPSIS">
+               <font>
+                  <Font name="DejaVu Sans Mono Bold" size="38.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imageViewLogo" fitHeight="150.0" fitWidth="200.0" layoutX="38.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/ordem-servico.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>
