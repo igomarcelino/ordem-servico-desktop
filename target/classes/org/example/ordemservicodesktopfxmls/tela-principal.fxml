@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ordemservicodesktop.controllers.TelaPrincipalController">
+  <children>
+    <MenuBar prefHeight="24.0" prefWidth="800.0" VBox.vgrow="NEVER">
+      <menus>
+        <Menu id="menuGerencial" fx:id="menuGerencial" mnemonicParsing="false" text="GERENCIAL">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="CLIENTE" />
+                  <MenuItem mnemonicParsing="false" text="SERVICO" />
+                  <MenuItem mnemonicParsing="false" text="FORMAS PAGAMENTO" />
+               </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="ORDEM">
+          <items>
+            <MenuItem mnemonicParsing="false" text="Nova Ordem" />
+            <MenuItem mnemonicParsing="false" text="Consultar Ordem" />
+            <SeparatorMenuItem mnemonicParsing="false" text="Alterar Ordem" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="RELATORIOS">
+          <items>
+            <MenuItem mnemonicParsing="false" text="About MyHelloApp" />
+          </items>
+        </Menu>
+            <Menu mnemonicParsing="false" text="SAIR">
+              <items>
+                <MenuItem mnemonicParsing="false" text="SAIR" />
+              </items>
+            </Menu>
+      </menus>
+    </MenuBar>
+    <AnchorPane id="anchorPane" fx:id="anchorPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="555.0" prefWidth="886.0" VBox.vgrow="ALWAYS">
+      <children>
+            <Label layoutX="24.0" layoutY="524.0" text="usuario:" />
+            <Label id="usuarioLogado" layoutX="91.0" layoutY="524.0" text="labelUsuario" />
+            <Label id="labelEmpresa" layoutX="577.0" layoutY="524.0" text="Empresa:" />
+            <Label id="empresaLogada" layoutX="654.0" layoutY="524.0" text="labemEmpresa" />
+            <Label blendMode="COLOR_DODGE" layoutX="-3.0" layoutY="-8.0" prefHeight="110.0" prefWidth="800.0" textFill="#ff3a3a" />
+            <Button id="btnEntidades" fx:id="btnEntidades" layoutX="24.0" layoutY="14.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="81.0">
+               <graphic>
+                  <ImageView id="imgEntidades" fx:id="imgEntidades" fitHeight="70.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/921347.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="btnOrdens" fx:id="btnOrdens" layoutX="128.0" layoutY="14.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="81.0">
+               <graphic>
+                  <ImageView id="imgOrdens" fx:id="imgOrdens" fitHeight="70.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/ordem-servico.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="btnRelatorios" fx:id="btnRelatorios" layoutX="237.0" layoutY="14.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="81.0">
+               <graphic>
+                  <ImageView id="imgRelatorios" fx:id="imgRelatorios" fitHeight="70.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/pngwing.com.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="btnSair" fx:id="btnSair" layoutX="334.0" layoutY="14.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="81.0">
+               <graphic>
+                  <ImageView id="imgSair" fx:id="imgSair" fitHeight="70.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/btnSair.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+      </children>
+    </AnchorPane>
+  </children>
+</VBox>

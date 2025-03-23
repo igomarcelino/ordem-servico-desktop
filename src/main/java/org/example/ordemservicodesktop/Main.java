@@ -4,6 +4,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,9 +17,10 @@ public class Main extends Application {
 
 
         try {
-            URL fxmlLocation = getClass().getResource("/org/example/ordemservicodesktopfxmls/login.fxml");
+            URL fxmlLocation = getClass().getResource("/org/example/ordemservicodesktopfxmls/tela-principal.fxml");
             FXMLLoader loader = new FXMLLoader(fxmlLocation);
-            AnchorPane root = loader.load();
+            VBox root = loader.load();
+
             Scene scene = new Scene(root);
             stage.setResizable(false);
             stage.setScene(scene);

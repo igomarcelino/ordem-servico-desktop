@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="540.0" maxWidth="723.0" minHeight="538.0" minWidth="605.0" prefHeight="540.0" prefWidth="605.0" style="-fx-background-color: #F0F8FF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ordemservicodesktop.controllers.LoginController">
+<AnchorPane maxHeight="540.0" maxWidth="723.0" minHeight="538.0" minWidth="605.0" prefHeight="540.0" prefWidth="605.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ordemservicodesktop.controllers.LoginController">
    <children>
       <Label id="labelSenha" layoutX="92.0" layoutY="329.0" prefHeight="46.0" prefWidth="106.0" text="Senha" textFill="#5b5454">
          <font>
@@ -23,7 +23,7 @@
          </font>
       </Label>
       <TextField id="textFildUsuario" fx:id="txtUsuario" layoutX="198.0" layoutY="269.0" />
-      <Button id="btnLogar" fx:id="loginButton" layoutX="145.0" layoutY="433.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="106.0" text="Logar">
+      <Button id="btnLogar" fx:id="loginButton" layoutX="164.0" layoutY="433.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="106.0" text="Logar">
          <font>
             <Font name="DejaVu Sans Bold" size="14.0" />
          </font></Button>
