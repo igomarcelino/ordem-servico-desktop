@@ -10,6 +10,6 @@ public class ClienteDAO {
         this.connection = connection;
     }
 
-    private static String selectAll = "select *from tbl_cliente";
+    private static String selectAll = "select *from cliente";
 
 }
