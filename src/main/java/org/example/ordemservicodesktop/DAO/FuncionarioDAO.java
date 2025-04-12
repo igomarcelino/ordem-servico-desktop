@@ -1,6 +1,7 @@
 package org.example.ordemservicodesktop.DAO;
 
 import org.example.ordemservicodesktop.model.Funcionario;
+import org.mindrot.bcrypt.BCrypt;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -13,34 +14,30 @@ import java.util.Optional;
 public class FuncionarioDAO {
     private Connection connection;
 
-    public FuncionarioDAO(Connection connection){
+    public FuncionarioDAO(Connection connection) {
         this.connection = connection;
     }
 
-    private String selectAll = "select *from funcionario";
+    private String selectAll = "select *from funcionario where LOWER(usuario_login) = LOWER(?);" ;
 
 
+    public Optional<Funcionario> autentica(String username, String password) {
 
-    public boolean autentica(String username,
-                              String password){
-        List<Funcionario> funcionarioList = new ArrayList<>();
-        try (PreparedStatement preparedStatement = connection.prepareStatement(selectAll)){
+        try (PreparedStatement preparedStatement = connection.prepareStatement(selectAll)) {
+            preparedStatement.setString(1,username);
             ResultSet resultSet = preparedStatement.executeQuery();
-                while (resultSet.next()){
+                if(resultSet.next()){
                     Funcionario funcionario = new Funcionario();
                     funcionario.setNome(resultSet.getString("nome"));
                     funcionario.setUsuarioLogin(resultSet.getString("usuario_login"));
                     funcionario.setSenhaLogin(resultSet.getString("senha_login"));
-                    funcionarioList.add(funcionario);
+
+                    if (BCrypt.checkpw(password, funcionario.getSenhaLogin())){
+                        return Optional.of(funcionario);
+                    }
                 }
-                 Optional<Funcionario> userLogin = funcionarioList.stream().
-                        filter( f -> f.getUsuarioLogin().equalsIgnoreCase(username)).
-                        findFirst();
-                if (userLogin.isPresent()){
-                    return userLogin.get().getSenhaLogin().equalsIgnoreCase(password);
-                }else {
-                    return false;
-                }
+                return Optional.empty();
+            // verifica se possui usuar
         } catch (SQLException e) {
             throw new RuntimeException(e.getMessage());
         }

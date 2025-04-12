@@ -2,10 +2,12 @@ package org.example.ordemservicodesktop.controllers;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
+import org.example.ordemservicodesktop.model.Funcionario;
 
 import java.awt.*;
 import java.net.URL;
@@ -24,6 +26,10 @@ public class TelaPrincipalController implements Initializable {
     private ImageView logoSair;
     @FXML
     private VBox box;
+    @FXML
+    private Label labelUsuarioLogado;
+
+    private Funcionario funcionarioLogado;
 
 
     @Override
@@ -33,5 +39,11 @@ public class TelaPrincipalController implements Initializable {
         logoEntidades = new ImageView();
         logoEntidades.setImage(imagemCliente);
     }
+
+    public void setFuncionarioLogado(Funcionario funcionario){
+        this.funcionarioLogado = funcionario;
+        labelUsuarioLogado.setText(funcionario.getNome());
+    }
+
 
 }

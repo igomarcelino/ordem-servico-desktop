@@ -23,6 +23,7 @@ import javax.imageio.IIOException;
 import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class LoginController implements Initializable {
@@ -70,14 +71,19 @@ public class LoginController implements Initializable {
     @FXML
     private void logar(ActionEvent event){
         FuncionarioDAO funcionarioDAO = new FuncionarioDAO(Conexao.conexaoSQL());
-        boolean autenticado = funcionarioDAO.autentica(txtUsuario.getText(),txtSenha.getText());
-        if (autenticado){
-            JOptionPane.showMessageDialog(null,"Bem vindo " + txtUsuario.getText());
+          Optional<Funcionario> funcionario = funcionarioDAO.autentica(txtUsuario.getText(),txtSenha.getText());
+        if (!funcionario.isEmpty()){
             try{
                 FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/org/example/ordemservicodesktopfxmls/tela-principal.fxml"));
                 Parent root = fxmlLoader.load();
+
+                // pegando o funcionario que realizou o login
+                TelaPrincipalController controller = fxmlLoader.getController();
+                controller.setFuncionarioLogado(funcionario.get());
+
                 Stage stage = new Stage();
                 stage.setScene(new Scene(root));
+
                 stage.show();
                 ((Stage)(((Node) event.getSource()).getScene().getWindow())).close();
             } catch (IOException e) {
@@ -85,7 +91,11 @@ public class LoginController implements Initializable {
             }
 
         }else {
-            JOptionPane.showMessageDialog(null,"Usuario ou Senha Incorreto");
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro de Login");
+            alert.setHeaderText("Credenciais inválidas");
+            alert.setContentText("Usuário ou senha incorretos. Por favor, tente novamente.");
+            alert.showAndWait();
         }
     }
 

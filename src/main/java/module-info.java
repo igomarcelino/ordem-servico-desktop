@@ -7,6 +7,7 @@ module org.example.ordemservicodesktop {
     requires org.kordamp.bootstrapfx.core;
     requires java.desktop;
     requires java.sql;
+    requires bcrypt;
 
     opens org.example.ordemservicodesktop to javafx.fxml;
     exports org.example.ordemservicodesktop;

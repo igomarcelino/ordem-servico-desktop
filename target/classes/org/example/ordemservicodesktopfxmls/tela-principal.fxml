@@ -76,7 +76,7 @@
     <AnchorPane id="anchorPane" fx:id="anchorPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="555.0" prefWidth="886.0" VBox.vgrow="ALWAYS">
       <children>
             <Label layoutX="24.0" layoutY="551.0" text="usuario:" />
-            <Label id="usuarioLogado" layoutX="91.0" layoutY="551.0" text="labelUsuario" />
+            <Label id="labelUsuarioLogado" fx:id="labelUsuarioLogado" layoutX="91.0" layoutY="551.0" text="labelUsuario" />
             <Label id="labelEmpresa" layoutX="576.0" layoutY="551.0" text="Empresa:" />
             <Label id="empresaLogada" layoutX="653.0" layoutY="551.0" text="labemEmpresa" />
             <Label blendMode="COLOR_DODGE" layoutX="-3.0" layoutY="-8.0" prefHeight="110.0" prefWidth="800.0" textFill="#ff3a3a" />

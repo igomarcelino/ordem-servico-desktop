@@ -1,0 +1,9 @@
+/home/igo/Dev/git/study/gitStudy/Languages/Java/Projetos/ordem-servico-desktop/src/main/java/module-info.java
+/home/igo/Dev/git/study/gitStudy/Languages/Java/Projetos/ordem-servico-desktop/src/main/java/org/example/ordemservicodesktop/DAO/ClienteDAO.java
+/home/igo/Dev/git/study/gitStudy/Languages/Java/Projetos/ordem-servico-desktop/src/main/java/org/example/ordemservicodesktop/DAO/FuncionarioDAO.java
+/home/igo/Dev/git/study/gitStudy/Languages/Java/Projetos/ordem-servico-desktop/src/main/java/org/example/ordemservicodesktop/Main.java
+/home/igo/Dev/git/study/gitStudy/Languages/Java/Projetos/ordem-servico-desktop/src/main/java/org/example/ordemservicodesktop/controllers/LoginController.java
+/home/igo/Dev/git/study/gitStudy/Languages/Java/Projetos/ordem-servico-desktop/src/main/java/org/example/ordemservicodesktop/controllers/TelaPrincipalController.java
+/home/igo/Dev/git/study/gitStudy/Languages/Java/Projetos/ordem-servico-desktop/src/main/java/org/example/ordemservicodesktop/data/Conexao.java
+/home/igo/Dev/git/study/gitStudy/Languages/Java/Projetos/ordem-servico-desktop/src/main/java/org/example/ordemservicodesktop/model/Funcionario.java
+/home/igo/Dev/git/study/gitStudy/Languages/Java/Projetos/ordem-servico-desktop/src/main/java/org/example/ordemservicodesktop/model/Roles.java
