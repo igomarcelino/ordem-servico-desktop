@@ -68,6 +68,16 @@ public class LoginController implements Initializable {
         stage.close();
     }
 
+    /**
+     * Método chamado ao clicar no botão de login.
+     * <p>
+     * Realiza a autenticação do usuário utilizando as credenciais fornecidas nos campos
+     * de login (usuário e senha). Caso as credenciais estejam corretas, a tela principal do
+     * sistema é carregada e a janela atual é fechada. Caso contrário, um alerta de erro é exibido.
+     * </p>
+     *
+     * @param event o evento gerado pelo clique no botão de login
+     */
     @FXML
     private void logar(ActionEvent event){
         FuncionarioDAO funcionarioDAO = new FuncionarioDAO(Conexao.conexaoSQL());

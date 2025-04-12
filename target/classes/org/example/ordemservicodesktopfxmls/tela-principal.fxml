@@ -42,6 +42,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <VBox prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.ordemservicodesktop.controllers.TelaPrincipalController">
   <children>
@@ -75,10 +76,19 @@
     </MenuBar>
     <AnchorPane id="anchorPane" fx:id="anchorPane" maxHeight="-1.0" maxWidth="-1.0" prefHeight="555.0" prefWidth="886.0" VBox.vgrow="ALWAYS">
       <children>
-            <Label layoutX="24.0" layoutY="551.0" text="usuario:" />
-            <Label id="labelUsuarioLogado" fx:id="labelUsuarioLogado" layoutX="91.0" layoutY="551.0" text="labelUsuario" />
-            <Label id="labelEmpresa" layoutX="576.0" layoutY="551.0" text="Empresa:" />
-            <Label id="empresaLogada" layoutX="653.0" layoutY="551.0" text="labemEmpresa" />
+            <Label layoutX="15.0" layoutY="540.0" prefHeight="27.0" prefWidth="130.0" text="Usuario Logado:">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label id="labelUsuarioLogado" fx:id="labelUsuarioLogado" layoutX="145.0" layoutY="540.0" prefHeight="27.0" prefWidth="98.0" text="labelUsuario">
+               <font>
+                  <Font name="KacstPen" size="14.0" />
+               </font></Label>
+            <Label id="labelEmpresa" layoutX="564.0" layoutY="546.0" text="Empresa:">
+               <font>
+                  <Font name="System Bold Italic" size="14.0" />
+               </font></Label>
+            <Label id="empresaLogada" layoutX="649.0" layoutY="546.0" text="labemEmpresa" />
             <Label blendMode="COLOR_DODGE" layoutX="-3.0" layoutY="-8.0" prefHeight="110.0" prefWidth="800.0" textFill="#ff3a3a" />
             <Button id="btnEntidades" fx:id="btnEntidades" layoutX="24.0" layoutY="14.0" mnemonicParsing="false" prefHeight="80.0" prefWidth="81.0">
                <graphic>
@@ -125,6 +135,7 @@
                   </ImageView>
                </graphic>
             </Button>
+            <Label id="lblData" fx:id="lblData" layoutX="327.0" layoutY="535.0" prefHeight="27.0" prefWidth="109.0" text="DATA" />
       </children>
     </AnchorPane>
   </children>
