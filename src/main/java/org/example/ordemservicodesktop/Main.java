@@ -17,9 +17,9 @@ public class Main extends Application {
 
 
         try {
-            URL fxmlLocation = getClass().getResource("/org/example/ordemservicodesktopfxmls/tela-principal.fxml");
+            URL fxmlLocation = getClass().getResource("/org/example/ordemservicodesktopfxmls/login.fxml");
             FXMLLoader loader = new FXMLLoader(fxmlLocation);
-            VBox root = loader.load();
+            AnchorPane root = loader.load();
 
             Scene scene = new Scene(root);
             stage.setResizable(false);

@@ -21,7 +21,7 @@ public class FuncionarioDAO {
 
 
 
-    private boolean autentica(String username,
+    public boolean autentica(String username,
                               String password){
         List<Funcionario> funcionarioList = new ArrayList<>();
         try (PreparedStatement preparedStatement = connection.prepareStatement(selectAll)){
